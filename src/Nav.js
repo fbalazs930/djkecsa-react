@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
-export default function Nav(){
+export default function Nav() {
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
     const closeMenu = () => { setClick(false) };
@@ -16,16 +16,16 @@ export default function Nav(){
 
             <div className={click ? 'links active' : 'links'}>
                 <Link to="/" onClick={closeMenu}>
-                    Kezdőlap
+                    <a href='/'>Kezdőlap</a>
                 </Link>
                 <Link to="/bemutatkozo" onClick={closeMenu}>
-                    Bemutatkozó
+                    <a href='/bemutatkozo'>Bemutatkozó</a>
                 </Link>
                 <Link to="/felszereles" onClick={closeMenu}>
-                    Felszerelés
+                    <a href='/felszereles'>Felszerelés</a>
                 </Link>
                 <Link to="/kapcsolat" onClick={closeMenu}>
-                    Kapcsolat
+                    <a href='/kapcsolat'>Kapcsolat</a>
                 </Link>
             </div>
 

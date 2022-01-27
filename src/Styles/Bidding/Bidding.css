@@ -1,0 +1,137 @@
+::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: #dadada;
+}
+
+:-ms-input-placeholder {
+  color: #dadada;
+}
+
+::-ms-input-placeholder {
+  color: #dadada;
+}
+
+::placeholder {
+  color: #dadada;
+}
+
+.bidding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bidding h1 {
+  padding: 2rem;
+}
+
+.bidding form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(40vw + 3.5rem);
+  min-height: 50vh;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+@media only screen and (max-width: 1050px) {
+  .bidding form {
+    width: calc(80vw + 3.5rem);
+  }
+}
+
+.bidding form .date {
+  color: #fff;
+}
+
+.bidding form input,
+.bidding form textarea {
+  width: 80%;
+  height: 5vh;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  -webkit-box-shadow: 0 0 0 .5px red;
+          box-shadow: 0 0 0 .5px red;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.267);
+}
+
+.bidding form input:focus,
+.bidding form textarea:focus {
+  -webkit-box-shadow: 0 0 0 2px red;
+          box-shadow: 0 0 0 2px red;
+}
+
+.bidding form textarea {
+  resize: none;
+  min-height: 20vh;
+  line-height: 25px;
+}
+
+.bidding form button {
+  cursor: pointer;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  background: red;
+  color: #fff;
+  border: 2px solid red;
+  padding: 0.8rem 1.3rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bidding form button:hover {
+  color: red;
+}
+
+.bidding form button:hover::after {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: skewX(-45deg) scale(1, 1);
+          transform: skewX(-45deg) scale(1, 1);
+}
+
+.bidding form button::after {
+  content: "";
+  background: #111111;
+  position: absolute;
+  z-index: -1;
+  padding: 1rem 1.5rem;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  left: -35%;
+  right: -35%;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: skewX(-45deg) scale(0, 1);
+          transform: skewX(-45deg) scale(0, 1);
+}
+/*# sourceMappingURL=Bidding.css.map */

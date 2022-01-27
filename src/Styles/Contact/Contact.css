@@ -1,0 +1,85 @@
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 70vh;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+}
+
+.contact h1 {
+  padding: 2rem 0;
+}
+
+.contact i {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact .icons {
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.contact .icons .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.75rem;
+}
+
+.contact .icons .icon p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.contact .icons .icon:hover i {
+  color: #f63636;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.contact .bottom {
+  margin: 3rem 0 0 0;
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+@media only screen and (max-width: 460px) {
+  .contact .bottom {
+    text-align: left;
+  }
+}
+/*# sourceMappingURL=Contact.css.map */

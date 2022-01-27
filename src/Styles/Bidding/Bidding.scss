@@ -1,0 +1,83 @@
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+::placeholder{
+    color:#dadada;
+}
+.bidding {
+    h1 {
+        padding: 2rem;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: calc(40vw + 3.5rem);
+        min-height: 50vh;
+        gap: 1rem;
+        padding: 1rem 0;
+        @media only screen and (max-width: 1050px) {
+            width: calc(80vw + 3.5rem);
+        }
+        .date{
+            color:#fff;
+        }
+        input,
+        textarea {
+            width: 80%;
+            height: 5vh;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            box-shadow: 0 0 0 .5px red;
+            padding: 0.5rem;
+            &:focus {
+                box-shadow: 0 0 0 2px red;
+            }
+            background: rgba(0, 0, 0, 0.267);
+        }
+        textarea {
+            resize: none;
+            min-height: 20vh;
+            line-height: 25px;
+        }
+        button {
+            cursor: pointer;
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            background: red;
+            color: #fff;
+            border: 2px solid red;
+            padding: 0.8rem 1.3rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            &:hover {
+                color: red;
+                &::after {
+                    transition: all 0.3s ease-out;
+                    transform: skewX(-45deg) scale(1, 1);
+                }
+            }
+            &::after {
+                content: "";
+                background: #111111;
+                position: absolute;
+                z-index: -1;
+                padding: 1rem 1.5rem;
+                display: block;
+                transition: all 0.3s ease;
+                left: -35%;
+                right: -35%;
+                top: 0;
+                bottom: 0;
+                transform: skewX(-45deg) scale(0, 1);
+            }
+        }
+    }
+}
